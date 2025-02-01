@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD COUNTER</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+        <textarea class="textarea" placeholder= "Enter text here..."></textarea>
+        </div>
+
+        <div class="count">
+            <div class="words">
+                <h4 id="word-count">0</h4>
+                <p>WORDS</p>
+            </div>
+            <div class="characters">
+                <h4 id="char-count">0</h4>
+                <p>CHARACTERS</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let inputTextArea=document.querySelector(".textarea");
+        let words=document.getElementById("word-count");
+        let characters=document.getElementById("char-count");
+
+        inputTextArea.addEventListener("input",()=>{
+            characters.textContent=inputTextArea.value.length;
+
+            let txt=inputTextArea.value.trim();
+            words.textContent=txt.split(/\s+/).filter((val)=>val).length;
+        })
+    </script>
+</body>
+</html>

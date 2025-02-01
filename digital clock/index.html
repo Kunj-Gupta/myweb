@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL CLOCK</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>DIGITAL CLOCK</h2>
+        <div class="clock">
+            <div class="hour">12</div>:
+            <div class="minute">23</div>:
+            <div class="second">52</div>
+        </div>
+    </div>
+
+    <script>
+        function time(){
+            let hour=document.querySelector(".hour");
+            let minute=document.querySelector(".minute");
+            let second=document.querySelector(".second");
+
+            let date=new Date();
+            let hr=date.getHours();
+            let min=date.getMinutes();
+            let sec=date.getSeconds();
+
+            if(hr>12){
+                if(hr==24){
+                    hr=0;
+                }
+                else{
+                    hr-=12;
+                }
+            };
+
+            hour.innerHTML=`${hr}`;
+            minute.innerHTML=`${min}`;
+            second.innerHTML=`${sec}`;
+
+            // console.log(date,hr,min,sec);
+        };
+        setInterval(time,1000);
+    </script>
+</body>
+</html>

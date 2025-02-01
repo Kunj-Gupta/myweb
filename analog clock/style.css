@@ -1,0 +1,92 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.container{
+    height:70vh;
+    width:60vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9fffb;
+    box-shadow: 3px 3px 10px;
+}
+
+.clock{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    width: 30rem;
+    border-radius: 48%;
+    margin:1.5rem;
+    background: url("https://th.bing.com/th/id/R.f3fb1cf91204e3766547d543aa9bb13b?rik=Ldf6xUmdS3H71A&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2f9i4%2fo8z%2f9i4o8z9RT.gif&ehk=IwP2WBdWRYgAzaRCrNcd8KC59V15kVhuEVhn7uD5Sw0%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;
+}
+
+
+.hour{
+    position:absolute;
+    width:12rem;
+    height:12rem;
+    /* background-color:white; */
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+}
+.hour::before{
+    content:"";
+    height:50%;
+    width:5px;
+    background-color: rgb(0, 0, 0);
+    border-radius:50%;
+}
+
+
+.minute{
+    position:absolute;
+    width:15rem;
+    height:15rem;
+    /* background-color:white; */
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+}
+.minute::before{
+    content:"";
+    height:50%;
+    width:4px;
+    background-color: rgb(0, 0, 0);
+    border-radius:50%;
+}
+
+
+.second{
+    position:absolute;
+    width:17rem;
+    height:17rem;
+    /* background-color:white; */
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    /* transition:linear ; */
+}
+.second::before{
+    content:"";
+    height:50%;
+    width:2px;
+    background-color: rgb(255, 0, 0);
+    border-radius:50%;
+    transition:linear;
+}
